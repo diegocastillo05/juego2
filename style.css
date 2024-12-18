@@ -1,0 +1,297 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+.contentJuego1 {
+  min-height: 100vh;
+  background-color: #000;
+  padding: 50px 0;
+}
+
+.contentJuego1 .container {
+  max-width: 1460px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.contentJuego1 .espacio {
+  position: relative;
+  max-width: 1080px;
+  margin: 0 auto;
+  margin-top: 50px;
+}
+
+.contentJuego1 .espacio .cards {
+  display: flex;
+  gap: 23px;
+  justify-content: space-between;
+}
+
+.contentJuego1 .espacio .card {
+  border-radius: 26.05px;
+  border: 3.361px solid #6c6c6c;
+  padding: 15px;
+}
+
+.contentJuego1 .espacio .card .contentImg {
+  border-radius: 25px;
+  overflow: hidden;
+  margin-bottom: 15px;
+}
+
+.contentJuego1 .espacio .card .contentImg img {
+  width: 100%;
+}
+.contentJuego1 .ContentItem {
+  display: flex;
+  height: 57px;
+  z-index: 2;
+  border-radius: 18px;
+  border: 2px dashed #dcdcdc;
+  background: rgba(79, 79, 79, 0.6);
+  position: relative;
+}
+
+.contentJuego1 .items {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 17px;
+  max-width: 980px;
+  margin: 0 auto;
+  margin-top: 70px;
+}
+
+.contentJuego1 .item {
+  max-width: 315px;
+  width: 100%;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 15px;
+  color: #da291c;
+  background: #d9d9d9;
+  text-align: center;
+  font-family: "AMX", "Roboto", sans-serif;
+  font-size: 24px;
+  font-weight: 700;
+  padding: 14px 29px;
+}
+
+.contentJuego1 .item img {
+  width: 100%;
+  pointer-events: none;
+  user-select: none;
+}
+
+.contentJuego1 .ContentItem .mensaje {
+  position: absolute;
+  border-radius: 5px;
+  background: #20b038;
+  color: #fff;
+  font-family: Roboto;
+  font-size: 12px;
+  font-weight: 500;
+  pointer-events: none;
+  bottom: -15px;
+  left: 50%;
+  transform: translate(-50%, 100%);
+  width: 220px;
+  padding: 10px;
+  display: none;
+}
+.contentJuego1 .ContentItem.true .item {
+  background: #0c4e17;
+  border: 1px solid #20b038;
+  color: #fff;
+}
+.contentJuego1 .ContentItem.false .item {
+  background: #83170f;
+  border: 1px solid #da291c;
+  color: #fff;
+}
+.contentJuego1 .ContentItem .mensaje::before {
+  content: "";
+  position: absolute;
+  top: -8px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 0;
+  height: 0;
+  border: 5px solid transparent;
+  border-top: 0;
+  border-bottom: 10px solid #20b038;
+}
+
+.contentJuego1 .ContentItem.active .mensaje,
+.contentJuego1 .ContentItem.true .mensaje {
+  display: block;
+}
+.contentJuego1 .ContentItem.false .mensaje {
+  display: none;
+}
+.mensajeFinal {
+  margin-top: 50px;
+  display: none;
+}
+.mensajeFinal.active {
+  display: block;
+}
+.mensajeFinal h3 {
+  color: #fff;
+  text-align: center;
+  font-family: "AMX", "Roboto", sans-serif;
+  font-size: 28px;
+  font-weight: 700;
+}
+.mensajeFinal p {
+  color: #fff;
+  text-align: center;
+  font-family: "AMX Regular", "Roboto", sans-serif;
+  font-size: 22px;
+  font-weight: 400;
+  padding-top: 5px;
+}
+.contentJuego1 .btns {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 40px;
+  gap: 12px;
+}
+
+.contentJuego1 .btns button {
+  max-width: 200px;
+  width: 100%;
+  border-radius: 40px;
+  color: #fff;
+  text-align: center;
+  font-family: Roboto;
+  font-size: 16px;
+  font-weight: 600;
+  background: #9b9b9b;
+  padding: 10px 20px;
+  text-decoration: none;
+  border: none;
+  pointer-events: none;
+}
+
+.contentJuego1 .btns button.active {
+  background: #da291c;
+  cursor: pointer;
+  pointer-events: all;
+}
+
+.contentJuego1 .part1 h2 {
+  color: #fff;
+  text-align: center;
+  font-family: "AMX", "Roboto", sans-serif;
+  font-size: 68px;
+  font-weight: 700;
+  text-align: center;
+}
+
+.contentJuego1 .part1 p {
+  color: #fff;
+  font-family: "AMX", "Roboto", sans-serif;
+  font-size: 24px;
+  font-weight: 700;
+  text-align: center;
+  margin-top: 15px;
+}
+
+.item.dragging {
+  opacity: 1 !important; /* Eliminar opacidad */
+  box-shadow: none; /* Eliminar sombras */
+}
+
+@media (min-width: 640px) {
+  .contentJuego1 .container {
+    max-width: 640px;
+  }
+}
+
+@media (min-width: 768px) {
+  .contentJuego1 .container {
+    max-width: 768px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .contentJuego1 .container {
+    max-width: 1024px;
+  }
+}
+
+@media (min-width: 1260px) {
+  .contentJuego1 .container {
+    max-width: 1260px;
+  }
+}
+
+@media (min-width: 1460px) {
+  .contentJuego1 .container {
+    max-width: 1460px;
+  }
+}
+
+@media (max-width: 1024px) {
+  .contentJuego1 .part1 h2 {
+    font-size: 29px;
+  }
+  .contentJuego1 .part1 p {
+    font-size: 14px;
+  }
+  .contentJuego1 .espacio {
+    margin-top: 30px;
+  }
+}
+
+@media (max-width: 1023px) {
+  .contentJuego1 .items {
+    gap: 14px;
+  }
+  .contentJuego1 .ContentItem {
+    height: 37px;
+    border-radius: 9px;
+  }
+  .contentJuego1 .item {
+    font-size: 15px;
+    padding: 10px 20px;
+  }
+  .contentJuego1 .espacio .card .contentImg {
+    border-radius: 16px;
+  }
+  .contentJuego1 .espacio .card {
+    border-radius: 17px;
+    padding: 10px;
+  }
+  .contentJuego1 .ContentItem .mensaje {
+    width: 170px;
+  }
+}
+
+@media (max-width: 600px) {
+  .contentJuego1 .espacio .cards,
+  .contentJuego1 .items {
+    flex-direction: column;
+  }
+  .contentJuego1 .ContentItem .mensaje {
+    width: 250px;
+  }
+}
+
+@media (max-width: 560px) {
+  .contentJuego1 .btns {
+    margin-top: 20px;
+  }
+  .contentJuego1 .part1 h2 {
+    font-size: 24px;
+  }
+  .contentJuego1 .part1 p {
+    font-size: 14px;
+  }
+}

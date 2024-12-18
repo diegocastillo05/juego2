@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Juego 1</title>
+  </head>
+  <body>
+    <div class="contentJuego1">
+      <div class="container">
+        <div class="part1">
+          <h2>¡Pongamos a prueba lo aprendido!</h2>
+          <p>
+            ¿Cuántos dispositivos debería conectar según la velocidad de
+            internet? Arrastra y ubica cada velocidad
+          </p>
+        </div>
+        <div class="espacio">
+          <div class="cards">
+            <div class="card">
+              <div class="contentImg">
+                <picture>
+                  <source srcset="./img/card1.png" media="(min-width: 601px)" />
+                  <source
+                    srcset="./img/card1_2.png"
+                    media="(max-width: 600px)"
+                  />
+                  <img src="./img/card1.png" alt="fondo" />
+                </picture>
+              </div>
+              <div
+                class="ContentItem content1"
+                ondragover="allowDrop(event)"
+                ondrop="drop(event)"
+                data-card="card1"
+              >
+                <div class="mensaje">
+                  Se recomienda el plan Internet Fibra Óptica 500Mbps en
+                  adelante si es que tienes varios dispositivos en casa.
+                </div>
+              </div>
+            </div>
+            <div class="card">
+              <div class="contentImg">
+                <picture>
+                  <source srcset="./img/card2.png" media="(min-width: 601px)" />
+                  <source
+                    srcset="./img/card2_2.png"
+                    media="(max-width: 600px)"
+                  />
+                  <img src="./img/card2.png" alt="fondo" />
+                </picture>
+              </div>
+              <div
+                class="ContentItem content2"
+                ondragover="allowDrop(event)"
+                ondrop="drop(event)"
+                data-card="card2"
+              >
+                <div class="mensaje">
+                  Se recomienda el plan Internet Fibra Óptica 250Mbps en
+                  adelante si se tiene pocos dispositivos o se dará un uso
+                  regular.
+                </div>
+              </div>
+            </div>
+            <div class="card">
+              <div class="contentImg">
+                <picture>
+                  <source srcset="./img/card3.png" media="(min-width: 601px)" />
+                  <source
+                    srcset="./img/card3_2.png"
+                    media="(max-width: 600px)"
+                  />
+                  <img src="./img/card3.png" alt="fondo" />
+                </picture>
+              </div>
+              <div
+                class="ContentItem content3"
+                ondragover="allowDrop(event)"
+                ondrop="drop(event)"
+                data-card="card3"
+              >
+                <div class="mensaje">
+                  Se recomienda el plan Internet Fibra Óptica 100Mbps en
+                  adelante si se tiene pocos dispositivos o se dará un uso
+                  básico.
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="items">
+          <div
+            class="item"
+            draggable="true"
+            id="item"
+            ondragstart="drag(event)"
+            data-card="card3"
+          >
+            100 Mbps
+          </div>
+          <div
+            class="item"
+            draggable="true"
+            id="item2"
+            ondragstart="drag(event)"
+            data-card="card2"
+          >
+            250 Mbps
+          </div>
+          <div
+            class="item"
+            draggable="true"
+            id="item3"
+            ondragstart="drag(event)"
+            data-card="card1"
+          >
+            500 Mbps
+          </div>
+        </div>
+        <div class="mensajeFinal">
+          <h3>
+            ¡Seleccionaste el plan ideal para la cantidad de dispositivos!
+          </h3>
+          <p>Dale clic en “continuar”</p>
+        </div>
+        <div class="btns">
+          <button id="continuar">Continuar</button>
+          <button id="volver">Volver a intentar</button>
+        </div>
+      </div>
+    </div>
+    <script src="main.js"></script>
+  </body>
+</html>
