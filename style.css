@@ -274,6 +274,15 @@
   }
 }
 
+@media (max-width: 768px) {
+  .mensajeFinal h3 {
+    font-size: 20px;
+  }
+  .mensajeFinal p {
+    font-size: 18px;
+  }
+}
+
 @media (max-width: 600px) {
   .contentJuego1 .espacio .cards,
   .contentJuego1 .items {
@@ -281,6 +290,9 @@
   }
   .contentJuego1 .ContentItem .mensaje {
     width: 250px;
+  }
+  .mensajeFinal {
+    margin-top: 20px;
   }
 }
 
